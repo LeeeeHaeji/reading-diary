@@ -2,7 +2,19 @@
 export default {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        primary: "#436850",
+        point: "#ADBC9F",
+        button: "#12372A",
+      },
+      backgroundSize: {
+        "50%": "50%",
+      },
+      boxShadow: {
+        inner: "inset 0 0 0 2px #faba10",
+      },
+    },
   },
   plugins: [],
 };

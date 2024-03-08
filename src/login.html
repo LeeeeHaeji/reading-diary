@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 | 두근두근 독서일기</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body class="bg-primary 
+  ">
+    <!-- header -->
+    <header class="bg-white">
+      <div class="flex justify-between items-center h-[100px] px-[30px] max-w-[1284px] mx-auto">
+        <h1>
+          <a href="./">
+            <img
+              src="/img/logo-header.png"
+              alt="두근두근 독서일기"
+              class="w-[156px]"
+            />
+          </a>
+        </h1>
+        <a class="w-fit flex gap-2 items-center" href="./join.html">
+          <img src="/svg/icon-login.svg" alt="" />
+          회원가입</a
+        >
+      </div>
+    </header>
+    <!--// header -->
+    <!-- main -->
+    <main class=" mt-20 z-10
+    
+    ">
+      <h2>
+        <img src="/img/logo.png" alt="로그인" class="w-[249.6px] mx-auto" />
+      </h2>
+      <!-- form method="post" -->
+      <form class=" bg-point w-[447px] mx-auto my-11 rounded-xl relative
+      
+      before:content-[' '] before:w-[260px] before:h-[254.58px]
+  before:absolute before:top-[200px] before:left-[-200px] before:bg-[url('/img/leaf-left.png')]
+  before:bg-[length:260px_254.58px] before:z-[-10] 
+  
+  after:content-[' '] after:w-[260px] after:h-[254.58px]
+  after:absolute after:top-[200px] after:right-[-200px] after:bg-[url('/img/leaf-right.png')]
+  after:bg-[length:260px_254.58px] after:z-[-10]
+      ">
+        
+          <p class="pt-7 text-[24px] max-w-fit mx-auto underline decoration-[#436850] decoration-2 underline-offset-4"><strong >로그인</strong></p>
+          <div class="p-7 flex flex-col gap-6">
+            <div class="flex flex-col items-start  gap-1">
+              <label for="user-email">이메일</label>
+              <input class="w-full h-12 rounded-[5px] p-2" id="user-email" type="email" />
+            </div>
+            <div class="flex flex-col items-start  gap-2">
+              <label for="user-pw">비밀번호</label>
+              <input class="w-full h-12 rounded-[5px] p-2" id="user-pw" type="password" />
+            </div>
+            <button type="submit" class="bg-button h-12 rounded-[5px] text-white text-[18px]">로그인</button>
+          </div>
+        </div>
+      </form>
+      <!-- //form -->
+    </main>
+    <!--// main -->
+
+    <!-- footer -->
+    <footer class="text-center text-[#12372A] text-sm mb-20">
+      <p>Copyright 2024 Haeji Lee</p>
+    </footer>
+    <!-- //footer -->
+  </body>
+</html>
