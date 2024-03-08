@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 | 두근두근 독서일기</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body class="bg-primary">
+    <!-- header -->
+    <header class="bg-white">
+      <div class="mx-auto flex h-[100px] max-w-[1284px] items-center justify-between px-[30px]">
+        <h1>
+          <a href="./">
+            <img src="/img/logo-header.png" alt="두근두근 독서일기" class="w-[156px]" />
+          </a>
+        </h1>
+        <a class="flex w-fit items-center gap-2" href="./login.html">
+          <img src="/svg/icon-login.svg" alt="" />
+          로그인
+        </a>
+      </div>
+    </header>
+    <!--// header -->
+    <!-- main -->
+    <main class="mx-5 mt-20">
+      <h2>
+        <img src="/img/logo.png" alt="회원가입" class="mx-auto w-[249.6px]" />
+      </h2>
+      <!-- form method="post" -->
+      <form
+        class="before:content-[' '] after:content-[' '] relative mx-auto my-11 max-w-[447px] rounded-xl bg-point before:absolute before:left-[-200px] before:top-[200px] before:z-[-10] before:h-[254.58px] before:w-[260px] before:bg-[url('/img/leaf-left.png')] before:bg-[length:260px_254.58px] after:absolute after:right-[-200px] after:top-[200px] after:z-[-10] after:h-[254.58px] after:w-[260px] after:bg-[url('/img/leaf-right.png')] after:bg-[length:260px_254.58px]"
+      >
+        <p class="mx-auto max-w-fit pt-7 text-[24px] underline decoration-[#436850] decoration-2 underline-offset-4">
+          <strong>회원가입</strong>
+        </p>
+        <div class="flex flex-col gap-6 p-7">
+          <div class="flex flex-col items-start gap-1">
+            <label for="user-email">이메일</label>
+            <input class="h-12 w-full rounded-[5px] p-2" id="user-email" type="email" />
+          </div>
+          <div class="flex flex-col items-start gap-2">
+            <label for="user-pw">비밀번호</label>
+            <input class="h-12 w-full rounded-[5px] p-2" id="user-pw" type="password" />
+          </div>
+          <div class="flex flex-col items-start gap-1">
+            <label for="user-email">닉네임</label>
+            <input class="h-12 w-full rounded-[5px] p-2" id="user-email" type="text" />
+          </div>
+          <button type="submit" class="h-12 rounded-[5px] bg-button text-[18px] text-white">회원가입</button>
+        </div>
+      </form>
+      <!-- //form -->
+    </main>
+    <!--// main -->
+
+    <!-- footer -->
+    <footer class="mb-20 text-center text-sm text-[#12372A]">
+      <p>Copyright 2024 Haeji Lee</p>
+    </footer>
+    <!-- //footer -->
+  </body>
+</html>
