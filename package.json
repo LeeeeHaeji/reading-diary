@@ -15,5 +15,12 @@
     "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss": "^3.4.1",
     "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "firebase": "^10.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
   }
 }
