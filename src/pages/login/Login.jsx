@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useLogin } from "../../hooks/useLogin";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { error, isPending, login } = useLogin();
 
   const handleData = (event) => {
     if (event.target.type === "email") {
@@ -15,18 +17,24 @@ export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(email, password);
+    login(email, password);
   };
 
   return (
     <>
-      <main className="mx-5 mt-20">
+      <main className="bg-primary px-5 pt-20">
         <h2>
-          <img src="/img/logo.png" alt="로그인" className="mx-auto w-[249.6px]" />
+          <img src="/img/logo.png" alt="로그인" className="mx-auto mb-11 w-[249.6px]" />
         </h2>
 
         <form
           onSubmit={handleSubmit}
-          className="before:content-[' '] after:content-[' '] relative mx-auto my-11 max-w-[447px] rounded-xl bg-point before:absolute before:left-[-200px] before:top-[200px] before:z-[-10] before:h-[254.58px] before:w-[260px] before:bg-[url('/img/leaf-left.png')] before:bg-[length:260px_254.58px] after:absolute after:right-[-200px] after:top-[200px] after:z-[-10] after:h-[254.58px] after:w-[260px] after:bg-[url('/img/leaf-right.png')] after:bg-[length:260px_254.58px]"
+          className="before:content-[' '] after:content-[' '] 
+          relative mx-auto max-w-[447px] rounded-xl bg-point before:absolute
+           before:left-[-240px] before:top-[180px] before:h-[254.58px]
+            before:w-[260px] before:bg-[url('/img/leaf-left.png')] before:bg-[length:260px_254.58px] 
+            after:absolute after:right-[-240px] after:top-[180px] after:h-[254.58px] 
+            after:w-[260px] after:bg-[url('/img/leaf-right.png')] after:bg-[length:260px_254.58px]"
         >
           <p className="mx-auto max-w-fit pt-7 text-[24px] underline decoration-[#436850] decoration-2 underline-offset-4">
             <strong>로그인</strong>
@@ -55,14 +63,20 @@ export default function Login() {
                 required
               />
             </div>
-            <button type="submit" className="h-12 rounded-[5px] bg-button text-[18px] text-white">
-              로그인
-            </button>
+
+            {!isPending && (
+              <button type="submit" className="h-12 rounded-[5px] bg-button text-[18px] text-white">
+                로그인
+              </button>
+            )}
+
+            {isPending && <strong>로그인이 진행중입니다...</strong>}
+            {error && <strong>{error}</strong>}
           </div>
         </form>
       </main>
 
-      <footer className="mb-20 text-center text-sm text-[#12372A]">
+      <footer className="bg-primary pb-20 pt-11 text-center text-sm text-[#12372A]">
         <p>Copyright 2024 Haeji Lee</p>
       </footer>
     </>
