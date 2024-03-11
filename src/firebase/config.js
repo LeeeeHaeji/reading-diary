@@ -20,6 +20,7 @@ const appFireStore = getFirestore(app);
 // 인증 초기화
 const appAuth = getAuth();
 
+// 타임스탬프
 const timestamp = Timestamp;
 
 export { appFireStore, appAuth, timestamp };

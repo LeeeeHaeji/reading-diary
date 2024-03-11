@@ -23,9 +23,9 @@ const AuthContextProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    // onAuthStateChanged : 유저의 인증정보 변화를 관찰하는 함수입니다.
-    // onAuthStateChanged 함수는 Unsubscribe 함수를 반환합니다. 더 이상 유저의 변화를 관찰하지 않도록 하는 함수입니다.
-    // 우리는 새로고침 후 초기에 딱 한번 실행하면 되기 때문에 이후에는 구독을 중지합니다.
+    // onAuthStateChanged : 유저의 인증정보 변화를 관찰하는 함수
+    // onAuthStateChanged 함수는 Unsubscribe 함수를 반환. 더 이상 유저의 변화를 관찰하지 않도록 하는 함수입니다.
+    // 새로고침 후 초기에 딱 한번 실행하면 되기 때문에 이후에는 구독을 중지합니다.
     const unsubscribe = appAuth.onAuthStateChanged(function (user) {
       dispatch({ type: "authIsReady", payload: user });
     });
