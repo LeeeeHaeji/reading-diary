@@ -16,7 +16,6 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(email, password);
     login(email, password);
   };
 
@@ -31,10 +30,10 @@ export default function Login() {
           onSubmit={handleSubmit}
           className="before:content-[' '] after:content-[' '] 
           relative mx-auto max-w-[447px] rounded-xl bg-point before:absolute
-           before:left-[-240px] before:top-[180px] before:h-[254.58px]
-            before:w-[260px] before:bg-[url('/img/leaf-left.png')] before:bg-[length:260px_254.58px] 
-            after:absolute after:right-[-240px] after:top-[180px] after:h-[254.58px] 
-            after:w-[260px] after:bg-[url('/img/leaf-right.png')] after:bg-[length:260px_254.58px]"
+          before:left-[-240px] before:top-[180px] before:h-[254.58px]
+          before:w-[260px] before:bg-[url('/img/leaf-left.png')] before:bg-[length:260px_254.58px] 
+          after:absolute after:right-[-240px] after:top-[180px] after:h-[254.58px] 
+          after:w-[260px] after:bg-[url('/img/leaf-right.png')] after:bg-[length:260px_254.58px]"
         >
           <p className="mx-auto max-w-fit pt-7 text-[24px] underline decoration-[#436850] decoration-2 underline-offset-4">
             <strong>로그인</strong>

@@ -17,7 +17,6 @@ export default function DiaryForm({ uid }) {
 
   useEffect(() => {
     if (response.success) {
-      console.log(response);
       setTitle("");
       setContent("");
     }
@@ -25,8 +24,6 @@ export default function DiaryForm({ uid }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(title, content);
-    console.log(response);
     addDocument({
       uid,
       title,

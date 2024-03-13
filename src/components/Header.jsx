@@ -18,12 +18,12 @@ export default function Header() {
         {!user && (
           <>
             {location.pathname === "/signup" ? (
-              <Link to="/login" className="flex w-fit items-center gap-2">
+              <Link to="/login" className="flex w-fit items-center">
                 <img src="/svg/icon-login.svg" alt="" />
                 로그인
               </Link>
             ) : (
-              <Link to="/signup" className="flex w-fit items-center gap-2">
+              <Link to="/signup" className="flex w-fit items-center">
                 <img src="/svg/icon-join.svg" alt="" />
                 회원가입
               </Link>

@@ -19,8 +19,6 @@ export const useSignup = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user);
-        // 회원 정보를 정상적으로 받지 못하면 실패입니다.
         if (!user) {
           throw new Error("회원가입에 실패했습니다.");
         }
@@ -36,7 +34,6 @@ export const useSignup = () => {
           .catch((err) => {
             setError(err.message);
             setIsPending(false);
-            console.log(err.message);
           });
       })
       .catch((err) => {

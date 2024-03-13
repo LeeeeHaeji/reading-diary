@@ -8,10 +8,6 @@ export const useLogin = () => {
   const [isPending, setIsPending] = useState(false);
   const { dispatch } = useAuthContext();
 
-  // setInterval(() => {
-  //   console.log(appAuth.currentUser);
-  // }, 1000);
-
   const login = (email, password) => {
     setError(null);
     setIsPending(true);

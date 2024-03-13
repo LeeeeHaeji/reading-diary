@@ -41,7 +41,6 @@ export default function DiaryList({ diaries }) {
     <>
       {diaries.map((item) => {
         const createdDate = item.createdTime.toDate();
-        console.log(createdDate);
         const formattedDate = `${createdDate.getFullYear()}.${String(createdDate.getMonth() + 1).padStart(2, "0")}.${String(createdDate.getDate()).padStart(2, "0")}.${createdDate.toDateString().split(" ")[0].toUpperCase()}`;
 
         return (
@@ -49,7 +48,7 @@ export default function DiaryList({ diaries }) {
             {currentEditId === item.id ? (
               <form
                 onSubmit={(e) => handleUpdate(e, item)}
-                className="diary-article relative flex w-full flex-col border-[1px] border-t-4 border-[#12372A] bg-white px-10 py-[48px] shadow-white before:left-[30px] before:top-[-20px] before:z-10 after:bottom-[-20px] after:right-[30px]"
+                className="diary-article relative flex w-full flex-col gap-1 border-[1px] border-t-4 border-[#12372A] bg-white px-10 py-[48px] shadow-white before:left-[30px] before:top-[-20px] before:z-10 after:bottom-[-20px] after:right-[30px]"
               >
                 <header className="before:contents-[''] flex w-full items-center justify-between gap-5 before:absolute before:left-0 before:top-1 before:h-[1px] before:w-full before:bg-button">
                   <label htmlFor="diary-title" className="a11y-hidden">
@@ -59,9 +58,9 @@ export default function DiaryList({ diaries }) {
                     id="diary-title"
                     onChange={handleEditData}
                     value={editTitle}
-                    className="w-full p-2 text-[18px] font-bold text-[#12372A]"
+                    className="w-full rounded-[5px] border-2 border-[#ADBC9F] p-2 text-[18px] font-bold text-[#12372A]"
                   />
-                  <time className="text-[#12372A]" dateTime={formattedDate}>
+                  <time className="w-fit text-[#12372A]" dateTime={formattedDate}>
                     {formattedDate}
                   </time>
                 </header>
@@ -71,7 +70,7 @@ export default function DiaryList({ diaries }) {
                 <textarea
                   id="diary-content"
                   ref={textareaRef}
-                  className="w-full resize-none break-all p-2 text-[#12372A]"
+                  className="w-full resize-none break-all rounded-[5px] border-2 border-[#ADBC9F] p-2 text-[#12372A]"
                   onChange={handleEditData}
                   cols="1"
                   value={editContent}
