@@ -6,7 +6,7 @@
 - 각각의 개인 계정에 따라 독서일기를 작성하고 볼 수 있는 페이지가 별도로 설정되어 있어, 작성한 내용은 다른 사람이 볼 수 없습니다.
 - firebase의 firestore 이용하여 CRUD를 구현했습니다.
 
-## [🚀 배포 URL](reading-diary-8e4d8.web.app)
+## [🚀 배포 URL](https://reading-diary-8e4d8.web.app/)
 #### 테스트 계정
 ```
 ID: test@test.com
